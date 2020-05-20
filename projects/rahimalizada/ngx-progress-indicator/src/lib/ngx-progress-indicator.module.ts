@@ -1,11 +1,17 @@
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
-
+import { ProgressIndicatorInterceptor } from './progress-indicator.interceptor';
 
 @NgModule({
   declarations: [],
-  imports: [
+  imports: [],
+  exports: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useExisting: ProgressIndicatorInterceptor,
+      multi: true,
+    },
   ],
-  exports: []
 })
-export class NgxProgressIndicatorModule { }
+export class NgxProgressIndicatorModule {}
