@@ -1,6 +1,26 @@
 {
   "name": "ngx-progress-indicator",
   "version": "0.0.0",
+  "description": "A directive for enablint/disabling an element indicating http/navigation progress",
+  "keywords": [
+    "http",
+    "navigation",
+    "progress",
+    "indicator",
+    "angular"
+  ],
+  "author": {
+    "name": "Rahim Alizada"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/rahimalizada/ngx-progress-indicator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahimalizada/ngx-progress-indicator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rahimalizada/ngx-progress-indicator/issues"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
