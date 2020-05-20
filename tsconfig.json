@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@rahimalizada/ngx-progress-indicator": [
+        "dist/rahimalizada/ngx-progress-indicator/rahimalizada-ngx-progress-indicator",
+        "dist/rahimalizada/ngx-progress-indicator"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

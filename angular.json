@@ -2,5 +2,46 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "@rahimalizada/ngx-progress-indicator": {
+      "projectType": "library",
+      "root": "projects/rahimalizada/ngx-progress-indicator",
+      "sourceRoot": "projects/rahimalizada/ngx-progress-indicator/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/rahimalizada/ngx-progress-indicator/tsconfig.lib.json",
+            "project": "projects/rahimalizada/ngx-progress-indicator/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rahimalizada/ngx-progress-indicator/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rahimalizada/ngx-progress-indicator/src/test.ts",
+            "tsConfig": "projects/rahimalizada/ngx-progress-indicator/tsconfig.spec.json",
+            "karmaConfig": "projects/rahimalizada/ngx-progress-indicator/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rahimalizada/ngx-progress-indicator/tsconfig.lib.json",
+              "projects/rahimalizada/ngx-progress-indicator/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "@rahimalizada/ngx-progress-indicator"
 }
