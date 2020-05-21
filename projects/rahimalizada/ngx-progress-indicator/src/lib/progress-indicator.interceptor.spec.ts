@@ -30,13 +30,13 @@ describe('ProgressIndicatorInterceptor', () => {
   });
 
   it('should emit value on http request start and end', () => {
-    expect(interceptor.getProgressSubject.getValue()).toBe(0);
+    expect(interceptor.progressSubject.getValue()).toBe(0);
     interceptor.intercept(request, handler).subscribe((val) => {});
-    expect(interceptor.getProgressSubject.getValue()).toBe(1);
+    expect(interceptor.progressSubject.getValue()).toBe(1);
 
     observer.next(jasmine.createSpyObj('HttpEvent', ['']));
-    expect(interceptor.getProgressSubject.getValue()).toBe(1);
+    expect(interceptor.progressSubject.getValue()).toBe(1);
     observer.complete();
-    expect(interceptor.getProgressSubject.getValue()).toBe(0);
+    expect(interceptor.progressSubject.getValue()).toBe(0);
   });
 });
