@@ -41,7 +41,7 @@ export class ProgressIndicatorDirective implements OnDestroy {
   @Input()
   set ngProgressIndicator(type: IndicatorType) {
     if (type === 'http' || type === 'both') {
-      this.subscription = this.progressIndicatorInterceptor.getProgressSubject.subscribe(
+      this.subscription = this.progressIndicatorInterceptor.progressSubject.subscribe(
         (val) => {
           this.showHttp = val > 0;
           Promise.resolve(null).then(() => this.redraw());
