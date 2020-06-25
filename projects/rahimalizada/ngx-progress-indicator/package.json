@@ -22,9 +22,11 @@
     "url": "https://github.com/rahimalizada/ngx-progress-indicator/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^9.1.9",
-    "@angular/core": "^9.1.9",
-    "@angular/router": "^9.1.9",
-    "tslib": "^1.10.0"
+    "@angular/common": "^10.0.0",
+    "@angular/core": "^10.0.0",
+    "@angular/router": "^10.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
   }
 }
