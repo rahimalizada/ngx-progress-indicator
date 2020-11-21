@@ -1,6 +1,6 @@
 {
   "name": "ngx-progress-indicator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A directive for enablint/disabling an element indicating http/navigation progress",
   "keywords": [
     "http",
